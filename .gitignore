@@ -1,0 +1,7 @@
+*.vcxproj
+*.vcxproj.filters
+*.sln
+CMakeCache.txt
+CMakeFiles
+*.cmake
+.vs
