@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 2.6)
+
+project(Algorithms)
+
+file(GLOB SOURCE_FILES "src/*.cpp" "src/*.hpp")
+file(GLOB HEADER_FILES "src/*.h")
+
+add_executable(
+	Algorithms
+	${SOURCE_FILES}
+	${HEADER_FILES}
+)
