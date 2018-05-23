@@ -1,7 +1,7 @@
 #ifndef ALGORITHM_GRAPH_NODE
 #define ALGORITHM_GRAPH_NODE
 
-namespace Algorithm
+namespace algorithm
 {
 	struct Node
 	{

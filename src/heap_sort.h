@@ -3,9 +3,9 @@
 
 #include <vector>
 
-namespace Algorithm
+namespace algorithm
 {
-    namespace HeapSort
+    namespace sort
     {
         void heapSort(std::vector<int>& v);
     }

@@ -3,9 +3,9 @@
 #include <vector>
 #include <queue>
 
-namespace Algorithm
+namespace algorithm
 {
-	namespace Dijkstra
+	namespace graph
 	{
 		// distance from node to every other nodes are kept in distance array
 		void dijkstra(int from, int* parent, int* distance, const std::vector<std::vector<Node>>& graph)
@@ -45,14 +45,14 @@ namespace Algorithm
     int nodeCount, edgeCount;
     scanf("%d %d", &nodeCount, &edgeCount);
 
-	std::vector<std::vector<Algorithm::Node> > graph(nodeCount);
+	std::vector<std::vector<algorithm::Node> > graph(nodeCount);
 
     for(int i = 0; i < edgeCount; ++i) {
         int from, to, weight;
         scanf("%d %d %d", &from, &to, &weight);
 
-        graph[from - 1].push_back(Algorithm::Node(from - 1, to - 1, weight));
-        graph[to - 1].push_back(Algorithm::Node(to - 1, from - 1, weight));
+        graph[from - 1].push_back(algorithm::Node(from - 1, to - 1, weight));
+        graph[to - 1].push_back(algorithm::Node(to - 1, from - 1, weight));
     }
 
     int* parent = new int[nodeCount];
@@ -61,7 +61,7 @@ namespace Algorithm
     int* distance = new int[nodeCount];
     memset(distance, INT_MAX, nodeCount * sizeof(int));
 
-    Algorithm::dijkstra(0, parent, distance, graph);
+    algorithm::dijkstra(0, parent, distance, graph);
 
 	std::cout << "parent: ";
     for(int i = 0; i < nodeCount; ++i)

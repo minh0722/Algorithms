@@ -3,7 +3,7 @@
 
 #include <vector>
 
-namespace Util
+namespace util
 {
     template <typename T>
     void swap(T& l, T& r);

@@ -20,9 +20,9 @@
 #include <vector>
 
 
-namespace Algorithm
+namespace algorithm
 {
-	namespace BubbleSort
+	namespace sort
 	{
 		void sort(std::vector<int>& v);
 	}

@@ -1,9 +1,9 @@
 #ifndef ALGORITHM_DIJKSTRA
 #define ALGORITHM_DIJKSTRA
 
-namespace Algorithm
+namespace algorithm
 {
-	namespace Dijkstra
+	namespace graph
 	{
 		void dijkstra(int from, int* parent, int* distance, const std::vector<std::vector<Node>>& graph);
 	}

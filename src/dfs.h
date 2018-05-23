@@ -3,9 +3,9 @@
 
 #include <vector>
 
-namespace Algorithm
+namespace algorithm
 {
-	namespace Dfs
+	namespace graph
 	{
 		bool dfsSearchIterative(int start, int end, std::vector<std::vector<int>>& graph);
 		bool dfsSearchRecursive(int start, int end, std::vector<std::vector<int>>& graph, std::vector<int>& used);

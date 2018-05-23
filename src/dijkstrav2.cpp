@@ -3,9 +3,9 @@
 #include <vector>
 #include <queue>
 
-namespace Algorithm
+namespace algorithm
 {
-    namespace Dijkstra
+    namespace graph
     {
         // distance from node to every other nodes are kept in distance array
         void dijkstrav2(const std::vector<std::vector<Nodev2> >& graph, int* distance, int from)

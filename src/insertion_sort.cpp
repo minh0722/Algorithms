@@ -1,14 +1,14 @@
 #include "insertion_sort.h"
 #include "util.h"
 
-namespace Algorithm
+namespace algorithm
 {
-    namespace InsertionSort
+    namespace sort
     {
         void insertionSort(std::vector<int>& v)
         {
             /* This is my optimization for avoiding the worst case by checking if it's sorted first */
-            if (Util::isSorted(v))
+            if (util::isSorted(v))
             {
                 return;
             }

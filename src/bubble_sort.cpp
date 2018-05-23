@@ -1,8 +1,8 @@
 #include "bubble_sort.h"
 
-namespace Algorithm
+namespace algorithm
 {
-	namespace BubbleSort
+	namespace sort
 	{
 		void swap(int& l, int& r)
 		{

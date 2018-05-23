@@ -1,9 +1,9 @@
 #include "dfs.h"
 #include <stack>
 
-namespace Algorithm
+namespace algorithm
 {
-	namespace Dfs
+	namespace graph
 	{
 		bool dfsSearchIterative(int start, int end, std::vector<std::vector<int>>& graph)
 		{

@@ -1,6 +1,6 @@
 #include "graph_node.h"
 
-namespace Algorithm
+namespace algorithm
 {
 	Node::Node(int f, int t, int w)
 		: from(f), to(t), weight(w) {}

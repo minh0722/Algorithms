@@ -18,9 +18,9 @@
 * Average: n^2
 */
 
-namespace Algorithm
+namespace algorithm
 {
-    namespace InsertionSort
+    namespace sort
     {
         void insertionSort(std::vector<int>& v);
     }

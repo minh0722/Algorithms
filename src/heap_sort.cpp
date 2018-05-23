@@ -1,45 +1,45 @@
 #include "heap_sort.h"
 #include "util.h"
 
-void heapifyUp(std::vector<int>& v, int index)
+namespace algorithm
 {
-    while (v[index] > v[index / 2])
+    namespace sort
     {
-        Util::swap(v[index], v[index / 2]);
-        index /= 2;
-    }
-}
+        void heapifyUp(std::vector<int>& v, int index)
+        {
+            while (v[index] > v[index / 2])
+            {
+                util::swap(v[index], v[index / 2]);
+                index /= 2;
+            }
+        }
 
-void heapifyDown(std::vector<int>& v, int index, size_t size)
-{
-    // if there is no children
-    if (index * 2 + 1 >= size)
-    {
-        return;
-    }
-    
-    int left  = index * 2 + 1;
-    int right = index * 2 + 2 < size ? index * 2 + 2 : left;
-    int maxIdx;
-    
-    while(left < size)
-    {
-        maxIdx = v[left] > v[right] ? left : right;
-        
-        if (v[index] >= v[maxIdx])
-            break;
+        void heapifyDown(std::vector<int>& v, int index, size_t size)
+        {
+            // if there is no children
+            if (index * 2 + 1 >= size)
+            {
+                return;
+            }
 
-        Util::swap(v[index], v[maxIdx]);
-        index = maxIdx;
-        left = index * 2 + 1;
-        right = index * 2 + 2 < size ? index * 2 + 2 : left;
-    }
-}
+            int left = index * 2 + 1;
+            int right = index * 2 + 2 < size ? index * 2 + 2 : left;
+            int maxIdx;
 
-namespace Algorithm
-{
-    namespace HeapSort
-    {
+            while (left < size)
+            {
+                maxIdx = v[left] > v[right] ? left : right;
+
+                if (v[index] >= v[maxIdx])
+                    break;
+
+                util::swap(v[index], v[maxIdx]);
+                index = maxIdx;
+                left = index * 2 + 1;
+                right = index * 2 + 2 < size ? index * 2 + 2 : left;
+            }
+        }
+
         void heapSort(std::vector<int>& v)
         {
             size_t size = v.size();
@@ -51,7 +51,7 @@ namespace Algorithm
 
             for (size_t i = size - 1; i > 0; --i)
             {
-                Util::swap(v[i], v[0]);
+                util::swap(v[i], v[0]);
                 heapifyDown(v, 0, i);
             }
         }
