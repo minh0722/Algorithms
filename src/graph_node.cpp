@@ -9,4 +9,14 @@ namespace Algorithm
 	{
 		return weight > n.weight;
 	}
+
+    Nodev2::Nodev2(int n, int w) 
+        : num(n), weight(w) 
+    {
+    }
+
+    bool Nodev2::operator<(const Nodev2& n) const
+    {
+        return weight < n.weight;
+    }
 }

@@ -49,16 +49,16 @@ void heapSort(std::vector<int>& v) {
     }
 }
 
-int main() {
-    
-    vector<int> v = {7,2,6,3,3,1,3,4,5,21};
-    
-    heapSort(v);
-    
-    for(auto el : v) {
-        cout << el << " ";
-    }cout << endl;
-    
-    
-return 0;
-}
+//int main() {
+//    
+//    vector<int> v = {7,2,6,3,3,1,3,4,5,21};
+//    
+//    heapSort(v);
+//    
+//    for(auto el : v) {
+//        cout << el << " ";
+//    }cout << endl;
+//    
+//    
+//return 0;
+//}

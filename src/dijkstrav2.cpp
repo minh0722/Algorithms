@@ -1,69 +1,76 @@
-struct Node {
-    Node(int n, int w) : num(n), weight(w) {}
-    Node() : num(0), weight(0) {}
+#include "dijkstrav2.h"
+#include "graph_node.h"
+#include <vector>
+#include <queue>
 
-    bool operator<(const Node& n)const {
-        return weight < n.weight;
-    }
+namespace Algorithm
+{
+    namespace Dijkstra
+    {
+        // distance from node to every other nodes are kept in distance array
+        void dijkstrav2(const std::vector<std::vector<Nodev2> >& graph, int* distance, int from)
+        {
+            std::priority_queue<Nodev2> pq;
+            pq.push(Nodev2(from, 0));
 
-    int num, weight;
-};
+            char* used = new char[graph.size()];
+            memset(used, 0, graph.size() * sizeof(char));
 
-// distance from node to every other nodes are kept in distance array
-void dijkstra(const vector<vector<Node> >& graph, int* distance, int from) {
-    priority_queue<Node> pq;
-    pq.push(Node(from, 0));
+            int dist = 0;
 
-    char* used = new char[graph.size()];
-    memset(used, 0, graph.size() * sizeof(char));
+            while (!pq.empty())
+            {
+                Nodev2 current = pq.top();
+                pq.pop();
+                used[current.num] = 1;
 
-    int dist = 0;
+                for (int i = 0; i < graph[current.num].size(); ++i)
+                {
+                    if (!used[graph[current.num][i].num])
+                    {
+                        pq.push(Nodev2(graph[current.num][i].num, graph[current.num][i].weight + distance[current.num]));
+                    }
 
-    while(!pq.empty()) {
-        Node current = pq.top();
-        pq.pop();
-        used[current.num] = 1;
+                    if (distance[graph[current.num][i].num] < distance[current.num] + graph[current.num][i].weight)
+                    {
+                        distance[graph[current.num][i].num] = distance[current.num] + graph[current.num][i].weight;
+                    }
 
-        for(int i = 0; i < graph[current.num].size(); ++i) {
-            if( !used[graph[current.num][i].num] ) {
-                pq.push( Node(graph[current.num][i].num, graph[current.num][i].weight + distance[current.num]) );
+                    if (dist < distance[graph[current.num][i].num])
+                    {
+                        dist = distance[graph[current.num][i].num];
+                    }
+                }
             }
 
-            if(distance[graph[current.num][i].num] < distance[current.num] + graph[current.num][i].weight) {
-                distance[graph[current.num][i].num] = distance[current.num] + graph[current.num][i].weight;
-            }
-
-            if(dist < distance[graph[current.num][i].num]) {
-                dist = distance[graph[current.num][i].num];
-            }
+            // TODO: consider return it as a max distance
+            int maxDist = dist;
         }
     }
-
-    maxDist = dist;
 }
 
-int main() {
-
-    int nodeCount, edgeCount;
-    scanf("%d %d", &nodeCount, &edgeCount);
-
-    vector<vector<Node> > graph(nodeCount);
-
-    for(int i = 0; i < edgeCount; ++i) {
-        int from, to, weight;
-        scanf("%d %d %d", &from, &to, &weight);
-
-        graph[from - 1].push_back(Node(to - 1, weight));
-    }
-
-    int maxDist = 0;
-    
-    int* distance = new int[graph.size()];
-    memset(distance, 0, graph.size() * sizeof(int));
-    
-    dijkstra(graph, distance, 0);
-
-
-
-return 0;
-}
+//int main() 
+//{
+//
+//    int nodeCount, edgeCount;
+//    scanf("%d %d", &nodeCount, &edgeCount);
+//
+//    vector<vector<Node> > graph(nodeCount);
+//
+//    for(int i = 0; i < edgeCount; ++i)
+//    {
+//        int from, to, weight;
+//        scanf("%d %d %d", &from, &to, &weight);
+//
+//        graph[from - 1].push_back(Node(to - 1, weight));
+//    }
+//
+//    int maxDist = 0;
+//    
+//    int* distance = new int[graph.size()];
+//    memset(distance, 0, graph.size() * sizeof(int));
+//    
+//    dijkstrav2(graph, distance, 0);
+//
+//return 0;
+//}
