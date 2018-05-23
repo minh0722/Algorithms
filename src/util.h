@@ -10,6 +10,11 @@ namespace util
 
     template <typename T>
     bool isSorted(const std::vector<T>& v);
+
+    int getBit(int number, int bitIdx)
+    {
+        return (number >> bitIdx) & 1;
+    }
 }
 
 #include "util.hpp"
