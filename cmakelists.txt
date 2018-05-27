@@ -2,11 +2,20 @@ cmake_minimum_required(VERSION 2.6)
 
 project(Algorithms)
 
+set(BUILD_SHARED_LIBS true)
+
 file(GLOB SOURCE_FILES "src/*.cpp" "src/*.hpp")
 file(GLOB HEADER_FILES "src/*.h")
 
-add_executable(
-	Algorithms
+# add_executable(
+#	Algorithms
+#	${SOURCE_FILES}
+#	${HEADER_FILES}
+#)
+
+# create dynamic library if BUILD_SHARED_LIBS is true, static library if BUILD_SHARED_LIBS is false
+add_library(
+	algorithms
 	${SOURCE_FILES}
 	${HEADER_FILES}
 )
