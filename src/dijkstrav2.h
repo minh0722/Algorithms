@@ -1,6 +1,9 @@
 #ifndef ALGORITHM_DIJKSTRA_V2
 #define ALGORITHM_DIJKSTRA_V2
 
+#include <vector>
+#include "graph_node.h"
+
 namespace algorithm
 {
     namespace graph

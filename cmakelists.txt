@@ -7,15 +7,19 @@ set(BUILD_SHARED_LIBS true)
 file(GLOB SOURCE_FILES "src/*.cpp" "src/*.hpp")
 file(GLOB HEADER_FILES "src/*.h")
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 # add_executable(
 #	Algorithms
 #	${SOURCE_FILES}
 #	${HEADER_FILES}
 #)
 
-# create dynamic library if BUILD_SHARED_LIBS is true, static library if BUILD_SHARED_LIBS is false
+# create dynamic library if BUILD_SHARED_LIBS is true, static library if BUILD_SHARED_LIBS is false. Or add flag SHARED or STATIC
 add_library(
-	algorithms
+	algorithms SHARED
 	${SOURCE_FILES}
 	${HEADER_FILES}
 )
