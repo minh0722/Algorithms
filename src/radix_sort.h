@@ -13,11 +13,13 @@
 * https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
 */
 
+#include "common.h"
+
 namespace algorithm
 {
     namespace sort
     {
-        void radixSort(int*& v, int size);
+        ALGO_API void radixSort(int*& v, int size);
     }
 }
 

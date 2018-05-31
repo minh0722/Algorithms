@@ -2,6 +2,7 @@
 #define ALGORITHM_INSERTION_SORT
 
 #include <vector>
+#include "common.h"
 
 /*
 *  Stable sort
@@ -22,7 +23,7 @@ namespace algorithm
 {
     namespace sort
     {
-        void insertionSort(std::vector<int>& v);
+        ALGO_API void insertionSort(std::vector<int>& v);
     }
 }
 

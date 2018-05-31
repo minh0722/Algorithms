@@ -18,13 +18,13 @@
 */
 
 #include <vector>
-
+#include "common.h"
 
 namespace algorithm
 {
 	namespace sort
 	{
-		void sort(std::vector<int>& v);
+		ALGO_API void sort(std::vector<int>& v);
 	}
 }
 

@@ -2,12 +2,13 @@
 #define ALGORITHM_HEAP_SORT
 
 #include <vector>
+#include "common.h"
 
 namespace algorithm
 {
     namespace sort
     {
-        void heapSort(std::vector<int>& v);
+        ALGO_API void heapSort(std::vector<int>& v);
     }
 }
 

@@ -13,12 +13,13 @@
 *
 */
 
+#include "common.h"
 
 namespace algorithm
 {
     namespace sort
     {
-        void quickSort(int*& v, int leftIndex, int rightIndex);
+        ALGO_API void quickSort(int*& v, int leftIndex, int rightIndex);
     }
 }
 

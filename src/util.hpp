@@ -1,6 +1,9 @@
+#ifndef ALGORITHM_UTIL_HPP
+#define ALGORITHM_UTIL_HPP
+
 #include <type_traits>
 
-namespace Util
+namespace util
 {
     template <typename T>
     void swap(T& l, T& r)
@@ -24,3 +27,5 @@ namespace Util
         return true;
     }
 }
+
+#endif // ALGORITHM_UTIL_HPP

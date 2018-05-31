@@ -12,11 +12,13 @@
 * Average: nlogn
 */
 
+#include "common.h"
+
 namespace algorithm
 {
     namespace sort
     {
-        void mergeSort(int* listed, int begin, int end);
+        ALGO_API void mergeSort(int* listed, int begin, int end);
     }
 }
 

@@ -3,12 +3,13 @@
 
 #include <vector>
 #include "graph_node.h"
+#include "common.h"
 
 namespace algorithm
 {
     namespace graph
     {
-        void dijkstrav2(const std::vector<std::vector<Nodev2> >& graph, int* distance, int from);
+        ALGO_API void dijkstrav2(const std::vector<std::vector<Nodev2> >& graph, int* distance, int from);
     }
 }
 
