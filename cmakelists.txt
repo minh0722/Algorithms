@@ -11,6 +11,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+# define preprocessor macro
 add_definitions(-DALGO_API_EXPORT)
 
 # add_executable(
@@ -26,4 +27,6 @@ add_library(
 	${HEADER_FILES}
 )
 
+# specify compiler to use c++17 flag
+# TARGET target - target is in the add_library() or add_executable()
 set_property(TARGET algorithms PROPERTY CXX_STANDARD 17)
