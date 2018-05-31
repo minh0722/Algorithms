@@ -5,7 +5,7 @@ namespace algorithm
 {
     namespace sort
     {
-        void heapifyUp(std::vector<int>& v, int index)
+        void heapifyUp(std::vector<int>& v, size_t index)
         {
             while (v[index] > v[index / 2])
             {
@@ -14,7 +14,7 @@ namespace algorithm
             }
         }
 
-        void heapifyDown(std::vector<int>& v, int index, size_t size)
+        void heapifyDown(std::vector<int>& v, size_t index, size_t size)
         {
             // if there is no children
             if (index * 2 + 1 >= size)
@@ -22,8 +22,8 @@ namespace algorithm
                 return;
             }
 
-            int left = index * 2 + 1;
-            int right = index * 2 + 2 < size ? index * 2 + 2 : left;
+            size_t left = index * 2 + 1;
+            size_t right = index * 2 + 2 < size ? index * 2 + 2 : left;
             int maxIdx;
 
             while (left < size)

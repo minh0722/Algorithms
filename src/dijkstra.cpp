@@ -28,7 +28,7 @@ namespace algorithm
 					distance[current.to] = current.weight;
 				}
 
-				for (int i = 0; i < graph[current.to].size(); ++i)
+				for (size_t i = 0; i < graph[current.to].size(); ++i)
 				{
 					if (parent[graph[current.to][i].to] == -1)
 					{

@@ -5,14 +5,14 @@ using namespace std;
 
 // TODO: FIX THIS, NOT WORKING
 
-void heapifyUp(std::vector<int>& v, int index) {
+void heapifyUp(std::vector<int>& v, size_t index) {
     while (v[index] > v[index / 2]) {
         swap(v[index], v[index / 2]);        
         index /= 2;
     }
 }
 
-void heapifyDown(std::vector<int>& v, int index, size_t size) {
+void heapifyDown(std::vector<int>& v, size_t index, size_t size) {
     
     // if there is no children
     if (index * 2 + 1 >= size) {

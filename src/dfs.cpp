@@ -23,7 +23,7 @@ namespace algorithm
 				s.pop();
 				used[top] = 1;
 
-				for (int i = 0; i < graph[top].size(); ++i)
+				for (size_t i = 0; i < graph[top].size(); ++i)
 				{
 					int node = graph[top][i];
 
@@ -49,7 +49,7 @@ namespace algorithm
 
 			used[start] = 1;
 
-			for (int i = 0; i < graph[start].size(); ++i)
+			for (size_t i = 0; i < graph[start].size(); ++i)
 			{
 				int node = graph[start][i];
 
@@ -66,6 +66,8 @@ namespace algorithm
 					}
 				}
 			}
+
+            return false;
 		}
 	}
 }

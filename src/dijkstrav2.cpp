@@ -24,7 +24,7 @@ namespace algorithm
                 pq.pop();
                 used[current.num] = 1;
 
-                for (int i = 0; i < graph[current.num].size(); ++i)
+                for (size_t i = 0; i < graph[current.num].size(); ++i)
                 {
                     if (!used[graph[current.num][i].num])
                     {
