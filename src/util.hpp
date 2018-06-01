@@ -2,13 +2,14 @@
 #define ALGORITHM_UTIL_HPP
 
 #include <type_traits>
+#include <cstddef>
 
 namespace util
 {
     template <typename T>
     void swap(T& l, T& r)
     {
-        static_assert(std::is_integral<T>());
+        static_assert(std::is_integral<T>::value, "Only integral value is allowed fow swap");
         l = l + r;
         r = l - r;
         l = l - r;

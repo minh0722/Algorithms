@@ -1,6 +1,7 @@
 #include "radix_sort.h"
 #include "util.h"
 #include <vector>
+#include <cstring>
 
 #define INT_BITS_COUNT 32
 

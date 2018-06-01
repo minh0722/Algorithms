@@ -2,13 +2,14 @@
 #include "graph_node.h"
 #include <vector>
 #include <queue>
+#include <cstddef>
 
 namespace algorithm
 {
 	namespace graph
 	{
 		// distance from node to every other nodes are kept in distance array
-		void dijkstra(int from, int* parent, int* distance, const std::vector<std::vector<Node>>& graph)
+		void dijkstra(int from, int* parent, int* distance, const std::vector<std::vector<Node> >& graph)
 		{
 			std::priority_queue<Node> pq;
 			pq.push(Node(from, from, 0));

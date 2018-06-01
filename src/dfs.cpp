@@ -1,11 +1,12 @@
 #include "dfs.h"
 #include <stack>
+#include <cstddef>
 
 namespace algorithm
 {
 	namespace graph
 	{
-		bool dfsSearchIterative(int start, int end, std::vector<std::vector<int>>& graph)
+		bool dfsSearchIterative(int start, int end, std::vector<std::vector<int> >& graph)
 		{
 			if (start == end)
 			{
@@ -42,7 +43,7 @@ namespace algorithm
 			return false;
 		}
 
-		bool dfsSearchRecursive(int start, int end, std::vector<std::vector<int>>& graph, std::vector<int>& used)
+		bool dfsSearchRecursive(int start, int end, std::vector<std::vector<int> >& graph, std::vector<int>& used)
 		{
 			if (start == end)
 				return true;

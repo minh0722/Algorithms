@@ -2,6 +2,8 @@
 #include "graph_node.h"
 #include <vector>
 #include <queue>
+#include <cstring>
+#include <cstddef>
 
 namespace algorithm
 {

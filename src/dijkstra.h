@@ -9,7 +9,7 @@ namespace algorithm
 {
 	namespace graph
 	{
-        ALGO_API void dijkstra(int from, int* parent, int* distance, const std::vector<std::vector<Node>>& graph);
+        ALGO_API void dijkstra(int from, int* parent, int* distance, const std::vector<std::vector<Node> >& graph);
 	}
 }
 
