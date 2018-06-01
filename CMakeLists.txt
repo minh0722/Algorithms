@@ -2,8 +2,6 @@ cmake_minimum_required(VERSION 3.0.2)
 
 project(Algorithms)
 
-set(BUILD_SHARED_LIBS true)
-
 file(GLOB SOURCE_FILES "src/*.cpp" "src/*.hpp")
 file(GLOB HEADER_FILES "src/*.h")
 
