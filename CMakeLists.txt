@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0.2)
 
 project(Algorithms)
 
@@ -29,4 +29,4 @@ add_library(
 
 # specify compiler to use c++17 flag
 # TARGET target - target is in the add_library() or add_executable()
-set_property(TARGET algorithms PROPERTY CXX_STANDARD 17)
+set_property(TARGET algorithms PROPERTY CXX_STANDARD 11)
