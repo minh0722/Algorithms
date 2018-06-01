@@ -9,3 +9,6 @@ CMakeFiles
 bin
 Win32
 Debug
+Makefile
+build
+lib
