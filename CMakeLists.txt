@@ -11,6 +11,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 # define preprocessor macro
 add_definitions(-DALGO_API_EXPORT)
+add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 
 # add_executable(
 #	Algorithms
