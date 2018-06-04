@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <vector>
 #include <stdio.h>
+#include "graph_edge.h"
 
 /*
  * This algorithm find the minimum spanning tree using disjoint set forest.
@@ -60,19 +61,6 @@ struct DSF
             parent[leftRoot] = rightRoot;
             size[rightRoot] += size[leftRoot];
         }
-    }
-};
-
-struct Edge
-{
-    int from, to, weight;
-
-    Edge() : from(0), to(0), weight(0) {}
-    Edge(int f, int t, int w) : from(f), to(t), weight(w) {}
-
-    bool operator<(const Edge& e) const
-    {
-        return weight < e.weight;
     }
 };
 
