@@ -1,6 +1,9 @@
 #include "graph_edge.h"
 
-bool Edge::operator<(const Edge& e) const
+namespace algorithm
 {
-    return weight < e.weight;
+    bool Edge::operator<(const Edge& e) const
+    {
+        return weight < e.weight;
+    }
 }
