@@ -24,7 +24,7 @@ namespace algorithm
 {
 	namespace sort
 	{
-		ALGO_API void sort(std::vector<int>& v);
+		ALGO_API void bubbleSort(std::vector<int>& v);
 	}
 }
 

@@ -11,7 +11,7 @@ namespace algorithm
 			l = l - r;
 		}
 
-		void sort(std::vector<int>& v)
+		void bubbleSort(std::vector<int>& v)
 		{
 			int size = v.size();
 			bool swapped = false;
