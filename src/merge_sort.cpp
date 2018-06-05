@@ -1,5 +1,16 @@
-#include <iostream>
+#include "sorts.h"
 #include <vector>
+
+/*
+* Stable sort
+* It is stable because function merge compares two elements from two chunks and
+* if two elements are equal it takes from the left chunk. So the order is preserved
+*
+* Complexity:
+* Worst case: nlogn
+* Best case: nlogn
+* Average: nlogn
+*/
 
 namespace algorithm
 {

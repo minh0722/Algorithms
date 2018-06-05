@@ -1,9 +1,21 @@
-#include "radix_sort.h"
+#include "sorts.h"
 #include "util.h"
 #include <vector>
 #include <cstring>
 
 #define INT_BITS_COUNT 32
+
+/*
+* Implementation of Least significant bit radix sort
+*
+* Stable sort
+*
+* Complexity:
+* O(INT_BITS_COUNT * 2n) (Amortized nlogn)
+*
+* For clearer visual representation of this algorithm:
+* https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
+*/
 
 namespace algorithm
 {

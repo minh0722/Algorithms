@@ -1,5 +1,17 @@
-#include "quick_sort.h"
+#include "sorts.h"
 #include "util.h"
+
+/*
+* Not stable
+* It is not stable because in partition, if there is another element that is to the right of pivot and equal to it,
+* then that element will be positioned to the left of pivot, thus they are reverted.
+*
+* Complexity:
+* Worst case: n^2 (already sorted array)
+* Best case: nlogn
+* Average: nlogn
+*
+*/
 
 namespace algorithm
 {
