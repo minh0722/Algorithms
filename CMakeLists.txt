@@ -29,3 +29,8 @@ add_library(
 # specify compiler to use c++17 flag
 # TARGET target - target is in the add_library() or add_executable()
 set_property(TARGET algorithms PROPERTY CXX_STANDARD 11)
+
+# how to link external libraries in cmake
+# include_directories(dir1 dir2) - add include directories to the build
+# link_directories(directory1 directory2 ...) - Specify directories in which the linker will look for libraries
+# target_link_libraries(<target> lib1 lib2 ...)
