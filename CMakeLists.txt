@@ -30,6 +30,9 @@ add_library(
 # TARGET target - target is in the add_library() or add_executable()
 set_property(TARGET algorithms PROPERTY CXX_STANDARD 11)
 
+add_subdirectory(${CMAKE_BINARY_DIR}/googletest)
+target_link_libraries(algorithms gmock gtest)
+
 # how to link external libraries in cmake
 # include_directories(dir1 dir2) - add include directories to the build
 # link_directories(directory1 directory2 ...) - Specify directories in which the linker will look for libraries
