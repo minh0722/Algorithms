@@ -26,12 +26,14 @@ add_library(
 	${HEADER_FILES}
 )
 
+# where algorithms headers can be found
+include_directories(${CMAKE_BINARY_DIR}/src)
+
 # specify compiler to use c++17 flag
 # TARGET target - target is in the add_library() or add_executable()
 set_property(TARGET algorithms PROPERTY CXX_STANDARD 11)
 
-add_subdirectory(${CMAKE_BINARY_DIR}/third-party/googletest)
-target_link_libraries(algorithms gmock gtest)
+add_subdirectory(${CMAKE_BINARY_DIR}/tests)
 
 # how to link external libraries in cmake
 # include_directories(dir1 dir2) - add include directories to the build
