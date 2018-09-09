@@ -8,7 +8,9 @@ file(GLOB HEADER_FILES "src/*.h")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-set (CMAKE_CXX_STANDARD 11)
+
+# set the c++ standard to c++11. Valid flag since cmake version 3.1
+set(CMAKE_CXX_STANDARD 11)
 
 # define preprocessor macro
 add_definitions(-DALGO_API_EXPORT)
