@@ -1,6 +1,6 @@
 #include "sorts.h"
-#include "gmock\gmock.h"
-#include "gtest\gtest.h"
+#include "gmock/gmock.h"
+#include "gtest/gtest.h"
 #include "util.h"
 #include <vector>
 #include <random>
