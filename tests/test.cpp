@@ -25,6 +25,7 @@ TEST(InsertionSort, SortIsCorrect)
 
 int main(int argc, char** argv)
 {
+	testing::InitGoogleMock(&argc, argv);
 
-	return 0;
+	return RUN_ALL_TESTS();
 }
