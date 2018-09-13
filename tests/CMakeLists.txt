@@ -13,3 +13,9 @@ target_link_libraries(unittest gmock gtest algorithms)
 
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
+
+# need to call the test exe here. Check https://stackoverflow.com/questions/40696990/cmake-post-build-event-copy-compiled-libraries
+#add_custom_command(
+#    TARGET unittest
+#    POST_BUILD
+#    COMMAND )
