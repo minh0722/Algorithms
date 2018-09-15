@@ -15,6 +15,7 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /MTd")
 
 # need to call the test exe here. Check https://stackoverflow.com/questions/18961650/use-cmake-to-run-a-c-program-post-build
+# The custom command will run the executable (and build it first, if necessary). The custom target will drive the custom command - it depends on the command's output, so when the target is built, it will require its dependency to be built, causing the custom command to run.
 add_custom_command(
 	OUTPUT stamped_file.lic
 	COMMAND unittest)
