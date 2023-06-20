@@ -6,15 +6,6 @@ namespace algorithm
 {
     namespace sort
     {
-        void heapifyUp(std::vector<int>& v, size_t index)
-        {
-            while (v[index] > v[index / 2])
-            {
-                util::swap(v[index], v[index / 2]);
-                index /= 2;
-            }
-        }
-
         void heapifyDown(std::vector<int>& v, size_t index, size_t size)
         {
             // if there is no children
