@@ -17,7 +17,7 @@ namespace algorithm
 {
     namespace sort
     {
-        int partition(int*& v, int leftIndex, int rightIndex)
+        int partition(int* v, int leftIndex, int rightIndex)
         {
             if (leftIndex == rightIndex)
             {
@@ -43,7 +43,7 @@ namespace algorithm
             return swapIndex;
         }
 
-        void quickSort(int*& v, int leftIndex, int rightIndex)
+        void quickSort(int* v, int leftIndex, int rightIndex)
         {
             if (leftIndex >= rightIndex)
             {

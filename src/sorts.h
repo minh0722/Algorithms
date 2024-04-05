@@ -13,7 +13,7 @@ namespace algorithm
         ALGO_API void heapSort(std::vector<int>& v);
         ALGO_API void insertionSort(std::vector<int>& v);
         ALGO_API void mergeSort(int* listed, int begin, int end);
-        ALGO_API void quickSort(int*& v, int leftIndex, int rightIndex);
+        ALGO_API void quickSort(int* v, int leftIndex, int rightIndex);
         ALGO_API void radixSort(int*& v, int size);
         ALGO_API void selectionSort(std::vector<int>& v);
 	}
