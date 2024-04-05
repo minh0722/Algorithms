@@ -12,3 +12,8 @@ Debug
 Makefile
 build
 lib
+*.tlog
+*.obj
+*.log
+*.txt
+*.recipe
