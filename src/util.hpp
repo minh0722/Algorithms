@@ -10,9 +10,9 @@ namespace util
     void swap(T& l, T& r)
     {
         static_assert(std::is_integral<T>::value, "Only integral value is allowed fow swap");
-        l = l + r;
-        r = l - r;
-        l = l - r;
+        T temp = r;
+        r = l;
+        l = temp;
     }
 
     template <typename T>
