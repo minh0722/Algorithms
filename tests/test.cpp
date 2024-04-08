@@ -9,7 +9,7 @@ using testing::Bool;
 int generator()
 {
 	static std::mt19937 randomGenerator;
-	static std::uniform_int_distribution<int> distribution(1, 100000);
+	static std::uniform_int_distribution<int> distribution(-100000, 100000);
 
 	return distribution(randomGenerator);
 }
