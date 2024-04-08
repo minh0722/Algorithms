@@ -21,7 +21,7 @@ namespace algorithm
 {
     namespace sort
     {
-        void radixSort(int*& v, int size)
+        void radixSort(int* v, int size)
         {
             int buckets[2];
             memset(buckets, 0, 2 * sizeof(int));
