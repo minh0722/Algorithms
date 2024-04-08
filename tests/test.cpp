@@ -23,6 +23,51 @@ TEST(InsertionSort, SortIsCorrect)
 	EXPECT_TRUE(util::isSorted(v));
 }
 
+TEST(SelectionSort, SortIsCorrect)
+{
+	std::vector<int> v(100);
+	std::generate(v.begin(), v.end(), generator);
+	algorithm::sort::selectionSort(v);
+
+	EXPECT_TRUE(util::isSorted(v));
+}
+
+TEST(BubbleSort, SortIsCorrect)
+{
+	std::vector<int> v(100);
+	std::generate(v.begin(), v.end(), generator);
+	algorithm::sort::bubbleSort(v);
+
+	EXPECT_TRUE(util::isSorted(v));
+}
+
+TEST(HeapSort, SortIsCorrect)
+{
+	std::vector<int> v(100);
+	std::generate(v.begin(), v.end(), generator);
+	algorithm::sort::heapSort(v);
+
+	EXPECT_TRUE(util::isSorted(v));
+}
+
+TEST(MergeSort, SortIsCorrect)
+{
+	std::vector<int> v(100);
+	std::generate(v.begin(), v.end(), generator);
+	algorithm::sort::mergeSort(v.data(), 0, v.size() - 1);
+
+	EXPECT_TRUE(util::isSorted(v));
+}
+
+TEST(QuickSort, SortIsCorrect)
+{
+	std::vector<int> v(100);
+	std::generate(v.begin(), v.end(), generator);
+	algorithm::sort::quickSort(v.data(), 0, v.size() - 1);
+
+	EXPECT_TRUE(util::isSorted(v));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleMock(&argc, argv);
