@@ -32,12 +32,11 @@ namespace algorithm
 
             for (int i = 1; i < size; ++i)
             {
-                int num = v[i];
                 int minIndex = -1;
 
                 for (int j = i - 1; j >= 0; --j)
                 {
-                    if (v[j] <= num)
+                    if (v[j] <= v[i])
                         break;
 
                     v[j + 1] = v[j];
@@ -46,7 +45,7 @@ namespace algorithm
 
                 if (minIndex != -1)
                 {
-                    v[minIndex] = num;
+                    v[minIndex] = v[i];
                 }
             }
         }
