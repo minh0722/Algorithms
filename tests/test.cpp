@@ -68,6 +68,15 @@ TEST(QuickSort, SortIsCorrect)
 	EXPECT_TRUE(util::isSorted(v));
 }
 
+TEST(RadixSort, SortIsCorrect)
+{
+	std::vector<int> v(100);
+	std::generate(v.begin(), v.end(), generator);
+	algorithm::sort::radixSort(v.data(), v.size());
+
+	EXPECT_TRUE(util::isSorted(v));
+}
+
 int main(int argc, char** argv)
 {
 	testing::InitGoogleMock(&argc, argv);
