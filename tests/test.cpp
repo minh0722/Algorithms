@@ -1,4 +1,5 @@
 #include "sorts.h"
+#include "dfs.h"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 #include "util.h"
@@ -75,6 +76,32 @@ TEST(RadixSort, SortIsCorrect)
 	algorithm::sort::radixSort(v.data(), v.size());
 
 	EXPECT_TRUE(util::isSorted(v));
+}
+
+TEST(DFS, PathFound)
+{
+	using algorithm::Nodev2;
+
+	std::map<int, std::vector<Nodev2>> graph;
+	graph[0].push_back(Nodev2(1, 2));
+	graph[0].push_back(Nodev2(3, 3));
+	graph[2].push_back(Nodev2(3, 2));
+	graph[3].push_back(Nodev2(4, 2));
+
+	EXPECT_TRUE(algorithm::graph::dfsSearchAdjList(0, 4, graph));
+}
+
+TEST(DFS, PathNotFound)
+{
+	using algorithm::Nodev2;
+
+	std::map<int, std::vector<Nodev2>> graph;
+	graph[0].push_back(Nodev2(1, 2));
+	graph[0].push_back(Nodev2(3, 3));
+	graph[2].push_back(Nodev2(3, 2));
+	graph[3].push_back(Nodev2(4, 2));
+
+	EXPECT_FALSE(algorithm::graph::dfsSearchAdjList(0, 2, graph));
 }
 
 int main(int argc, char** argv)

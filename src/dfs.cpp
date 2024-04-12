@@ -1,4 +1,5 @@
 #include "dfs.h"
+#include "graph_node.h"8
 #include <stack>
 #include <cstddef>
 
@@ -6,6 +7,41 @@ namespace algorithm
 {
 	namespace graph
 	{
+		bool dfsSearchAdjList(int start, int end, std::map<int, std::vector<Nodev2>>& graph)
+		{
+			if (start == end)
+			{
+				return true;
+			}
+
+			std::stack<int> stack;
+			stack.push(start);
+
+			std::map<int, bool> visited;
+
+			while (!stack.empty())
+			{
+				int nodeValue = stack.top();
+				stack.pop();
+				visited[nodeValue] = true;
+
+				for (const auto& neighbor : graph[nodeValue])
+				{
+					if (neighbor.num == end)
+					{
+						return true;
+					}
+
+					if (!visited[neighbor.num])
+					{
+						stack.push(neighbor.num);
+					}
+				}
+			}
+
+			return false;
+		}
+
 		bool dfsSearchIterative(int start, int end, std::vector<std::vector<int> >& graph)
 		{
 			if (start == end)

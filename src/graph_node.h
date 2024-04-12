@@ -1,9 +1,11 @@
 #ifndef ALGORITHM_GRAPH_NODE
 #define ALGORITHM_GRAPH_NODE
 
+#include "common.h"
+
 namespace algorithm
 {
-	struct Node
+	struct ALGO_API Node
 	{
 		int from = 0;
 		int to = 0;
@@ -13,7 +15,7 @@ namespace algorithm
 		bool operator<(const Node& n) const;
 	};
 
-    struct Nodev2
+    struct ALGO_API Nodev2
     {
         int num = 0; 
         int weight = 0;
