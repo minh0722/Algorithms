@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.15)
 
 project(Algorithms)
 
@@ -35,6 +35,8 @@ include_directories(${CMAKE_BINARY_DIR}/src)
 # specify compiler to use c++17 flag
 # TARGET target - target is in the add_library() or add_executable()
 set_property(TARGET algorithms PROPERTY CXX_STANDARD 11)
+
+set_property(TARGET algorithms PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 
 add_subdirectory(${CMAKE_BINARY_DIR}/tests)
 
