@@ -14,6 +14,6 @@ namespace util
     int getBit(int number, int bitIdx);
 }
 
-#include "util.hpp"
-
 #endif // ALGORITHM_UTIL_H
+
+#include "util.hpp"
