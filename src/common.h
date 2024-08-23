@@ -19,4 +19,6 @@
 
 #endif // ALGO_API_EXPORT
 
+#define INT_MAX 2147483647
+
 #endif // COMMON_H

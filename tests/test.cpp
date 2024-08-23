@@ -1,5 +1,6 @@
 #include "sorts.h"
 #include "dfs.h"
+#include "segment_tree.h"
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 #include "util.h"
@@ -102,6 +103,20 @@ TEST(DFS, PathNotFound)
 	graph[3].push_back(Nodev2(4, 2));
 
 	EXPECT_FALSE(algorithm::graph::dfsSearchAdjList(0, 2, graph));
+}
+
+TEST(MinSegmentTree, QueryMinRangeForAddOperation)
+{
+	using algorithm::MinSegmentTree;
+
+	MinSegmentTree<int> st(8);
+
+	st.add(1, 0, 3);
+
+	const auto a = st.queryRangeMinAdd(0, 7);
+
+	EXPECT_TRUE(a.minVal == 2);
+	EXPECT_TRUE(a.count == 1);
 }
 
 int main(int argc, char** argv)
